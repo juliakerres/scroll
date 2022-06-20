@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll</title>
+
+    <style>
+        html {
+            scroll-behavior: ease;
+        }
+
+        body {
+            background-image: url("bilder/background.png");
+            background-repeat: repeat-y;
+            background-size: cover;
+            transition: ease;
+        }
+
+        /* scrollbar für jede einzelne div, eigene scrollbar */
+        /* one *
+        .one::-webkit-scrollbar {
+            width: 0.5em;
+        }
+
+        .one::-webkit-scrollbar-track {
+            box-shadow: inset 5px 0 6px #ff009d;
+        }
+
+
+        .one::-webkit-scrollbar-thumb {
+            background-color: inset 5px 5px 6px #3f273d;
+            outline: 1px solid rgba(77, 59, 59, 0);
+        }
+
+        /* two und die restlichen auch*
+        .eight::-webkit-scrollbar,
+        .seven::-webkit-scrollbar,
+        .six::-webkit-scrollbar,
+        .five::-webkit-scrollbar,
+        .four::-webkit-scrollbar,
+        .three::-webkit-scrollbar,
+        .two::-webkit-scrollbar {
+            width: 0.5em;
+        }
+
+        .eight::-webkit-scrollbar,
+        .seven::-webkit-scrollbar,
+        .six::-webkit-scrollbar,
+        .five::-webkit-scrollbar,
+        .four::-webkit-scrollbar,
+        .three::-webkit-scrollbar,
+        .two::-webkit-scrollbar-track {
+            box-shadow: inset 5px 0 6px #ff009d;
+            ;
+        }
+
+        .eight::-webkit-scrollbar,
+        .seven::-webkit-scrollbar,
+        .six::-webkit-scrollbar,
+        .five::-webkit-scrollbar,
+        .four::-webkit-scrollbar,
+        .three::-webkit-scrollbar,
+        .two::-webkit-scrollbar-thumb {
+            background-color: inset 5px 5px 6px #3f273d;
+            outline: 1px solid rgba(77, 59, 59, 0);
+        }
+
+        /* scrollbar end */
+
+        /* div als Verlauf */
+        .verlauf01 {
+            background: rgb(178, 52, 55);
+            background: linear-gradient(180deg, rgba(178, 52, 55, 1) 18%, rgba(179, 91, 80, 1) 31%, rgba(102, 48, 33, 1) 36%, rgba(138, 100, 112, 1) 100%);
+            width: 205px;
+            height: 2200px;
+        }
+
+        .verlauf02 {
+            background: rgb(206, 135, 118);
+            background: linear-gradient(180deg, rgba(206, 135, 118, 1) 26%, rgba(127, 69, 81, 1) 33%, rgba(49, 45, 109, 1) 45%, rgba(72, 85, 119, 1) 100%);
+            width: 400px;
+            height: 1000px;
+        }
+
+        .verlauf03 {
+            background: rgb(136, 201, 255);
+            background: linear-gradient(180deg, rgba(136, 201, 255, 1) 26%, rgba(122, 97, 62, 1) 31%, rgba(103, 51, 34, 1) 36%, rgba(197, 101, 98, 1) 100%);
+            width: 205px;
+            height: 2200px;
+        }
+
+        .verlauf04 {
+            background: rgb(167, 158, 73);
+            background: linear-gradient(180deg, rgba(167, 158, 73, 1) 40%, rgba(195, 190, 94, 1) 44%, rgba(225, 203, 85, 1) 51%, rgb(255, 238, 1) 100%);
+            width: 2000px;
+            height: 800px;
+        }
+
+        .verlauf05 {
+            background: rgb(60, 69, 74);
+            background: linear-gradient(90deg, rgba(60, 69, 74, 1) 53%, rgba(60, 69, 74, 0.26936712184873945) 64%, rgba(54, 207, 138, 1) 100%, rgba(251, 251, 251, 1) 100%);
+            width: 205px;
+            height: 1000px;
+        }
+
+        /* div als Verlauf */
+
+        #one {
+            width: 205px;
+            height: 1000px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            box-shadow: #ff00b3 0px 2px 7px;
+
+        }
+
+        #one {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        #two {
+            width: 205px;
+            height: 1000px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 215px;
+            top: 5px;
+            box-shadow: #ff00b3 0px 2px 7px;
+        }
+
+        #two {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        #three {
+            width: 205px;
+            height: 1000px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 425px;
+            top: 5px;
+            box-shadow: #ff00b3 0px 2px 7px;
+        }
+
+        #three {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        #four {
+            width: 200px;
+            height: 1000px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 635px;
+            top: 5px;
+            box-shadow: #ff00b3 0px 2px 7px;
+        }
+
+        #four {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        #five {
+            width: 205px;
+            height: 1000px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            box-shadow: #ff00b3 0px 2px 7px;
+        }
+
+        #five {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        #six {
+            width: 205px;
+            height: 1000px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            right: 215px;
+            top: 5px;
+            box-shadow: #ff00b3 0px 2px 7px;
+        }
+
+        #six {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        #seven {
+            width: 205px;
+            height: 1000px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            right: 425px;
+            top: 5px;
+            box-shadow: #ff00b3 0px 2px 7px;
+        }
+
+        #seven {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        #eight {
+            width: 205px;
+            height: 1000px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            right: 635px;
+            top: 5px;
+            box-shadow: #ff00b3 0px 2px 7px;
+        }
+
+        #eight {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        /* second layer */
+
+        .nine {
+            width: 110px;
+            height: 500px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 52.5px;
+            top: 200px;
+            transform: rotate(180deg)
+        }
+
+        #ten {
+            width: 110px;
+            height: 500px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 264.5px;
+            top: 200px;
+        }
+
+        #ten {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        #eleven {
+            width: 110px;
+            height: 500px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 480px;
+            top: 200px;
+            transform: rotate(180deg)
+        }
+
+        #eleven {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        .twelf {
+            width: 110px;
+            height: 500px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 685px;
+            top: 200px;
+        }
+
+
+        .thirteen {
+            width: 110px;
+            height: 500px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            right: 52.5px;
+            top: 200px;
+            transform: rotate(180deg)
+        }
+
+        #fourteen {
+            width: 110px;
+            height: 500px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            right: 264.5px;
+            top: 200px;
+        }
+
+        #fourteen {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        #fifteen {
+            width: 110px;
+            height: 500px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            right: 480px;
+            top: 200px;
+            transform: rotate(180deg)
+        }
+
+        #fifteen {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        .sixteen {
+            width: 110px;
+            height: 500px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            right: 680px;
+            top: 200px;
+        }
+
+        /* second layer */
+
+        /* third layer */
+        .seventeen {
+            width: 190px;
+            height: 500px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 110px;
+            top: 320px;
+        }
+
+        .eighteen {
+            width: 190px;
+            height: 500px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 330px;
+            top: 320px;
+        }
+
+        .ninteen {
+            width: 190px;
+            height: 500px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 550px;
+            top: 320px;
+        }
+
+        .twenty {
+            width: 190px;
+            height: 500px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            right: 110px;
+            top: 320px;
+        }
+
+        .twentyone {
+            width: 190px;
+            height: 500px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            right: 330px;
+            top: 320px;
+        }
+
+        .twentytwo {
+            width: 190px;
+            height: 500px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            right: 550px;
+            top: 320px;
+        }
+
+        /* end third layer */
+
+        /* fourth layer */
+
+        #twentythree {
+            width: 90px;
+            height: 1000px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 120px;
+            top: 320px;
+            filter: blur(4px);
+            -webkit-filter: blur(4px);
+        }
+
+        #twentythree {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        #twentyfour {
+            width: 90px;
+            height: 1000px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 330px;
+            top: 320px;
+            filter: blur(4px);
+            -webkit-filter: blur(4px);
+        }
+
+        #twentyfour {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        #twentyfive {
+            width: 90px;
+            height: 1000px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 540px;
+            top: 320px;
+            filter: blur(4px);
+            -webkit-filter: blur(4px);
+        }
+
+        #twentyfive {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        #twentysix {
+            width: 90px;
+            height: 1000px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            right: 120px;
+            top: 320px;
+            filter: blur(4px);
+            -webkit-filter: blur(4px);
+        }
+
+        #twentysix {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        #twentyseven {
+            width: 90px;
+            height: 1000px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            right: 330px;
+            top: 320px;
+            filter: blur(4px);
+            -webkit-filter: blur(4px);
+        }
+
+        #twentyseven {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        #twentyeight {
+            width: 90px;
+            height: 1000px;
+            object-position: top;
+            overflow: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            right: 540px;
+            top: 320px;
+            filter: blur(4px);
+            -webkit-filter: blur(4px);
+        }
+
+        #twentyeight {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        /* fourth layer */
+
+
+        /* fifth layer */
+
+        .twentynine {
+            width: 210px;
+            height: 200px;
+            object-position: top;
+            overflow-x: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 210px;
+            top: 670px;
+            transform: rotate(180deg) skew(-10deg);
+        }
+
+        .thirty {
+            width: 210px;
+            height: 200px;
+            object-position: top;
+            overflow-x: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 520px;
+            top: 670px;
+            transform: rotate(180deg) skew(-10deg);
+        }
+
+        .thirtyone {
+            width: 210px;
+            height: 200px;
+            object-position: top;
+            overflow-x: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            right: 210px;
+            top: 670px;
+            transform: rotate(180deg) skew(10deg);
+        }
+
+        .thirtytwo {
+            width: 210px;
+            height: 200px;
+            object-position: top;
+            overflow-x: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            right: 520px;
+            top: 670px;
+            transform: rotate(180deg) skew(10deg);
+
+        }
+
+        /* fifth layer little elements, falsch als cicle benannt, eigentlich parallelogram */
+        .circle01,
+        .circle02,
+        .circle03,
+        .circle04,
+        .circle05,
+        .circle06,
+        .circle07 {
+            width: 50px;
+            height: 20px;
+            position: fixed;
+            overflow-x: scroll;
+            transform: skew(20deg);
+            box-shadow: #411414 0px 2px 5px;
+            align-content: center;
+        }
+
+        .circle01 {
+            top: 20px;
+            left: 30px;
+            right: 40px;
+
+        }
+
+        .circle02 {
+            top: 100px;
+            left: 600px;
+            right: 100px;
+
+        }
+
+        .circle03 {
+            top: 200px;
+            left: 50px;
+            right: 800px;
+
+        }
+
+        .circle04 {
+            top: 400px;
+            left: 200px;
+            right: 10px;
+
+        }
+
+        .circle05 {
+            top: 800px;
+            left: 1600px;
+            right: 10px;
+
+        }
+
+        .circle06 {
+            top: 300px;
+            left: 1600px;
+            right: 10px;
+
+        }
+
+        .circle07 {
+            top: 500px;
+            left: 1100px;
+            right: 40px;
+
+        }
+
+        /* end fifth layer little elements, falsch als cicle benannt, eigentlich parallelogram */
+
+        /*________________form aus Illustrator */
+        .form01 {
+            height: 170px;
+            position: fixed;
+            top: 200px;
+            left: 50%;
+            transform: rotate(90deg);
+        }
+
+        /*_________________end form aus Illustrator */
+
+        /* nächste Schicht kleine Elemente - Dreiecke *
+
+        .triangle01 {
+            width: 20px;
+            height: 15px;
+            position: fixed;
+            overflow-x: scroll;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid;
+            box-shadow: #212ea3 0px 2px 5px;
+            align-content: center;
+        }
+
+        /* end nächste Schicht kleine Elemente - Dreiecke */
+
+        /* sixth layer */
+
+        .thirtythree {
+            width: 100px;
+            height: 400px;
+            object-position: top;
+            overflow-x: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 640px;
+            top: 920px;
+            transform: rotate(180deg);
+            box-shadow: #212ea3 0px 2px 5px;
+        }
+
+        .thirtyfour {
+            width: 100px;
+            height: 400px;
+            object-position: top;
+            overflow-x: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 430px;
+            top: 920px;
+            transform: rotate(180deg);
+            box-shadow: #212ea3 0px 2px 5px;
+        }
+
+        .thirtyfive {
+            width: 100px;
+            height: 400px;
+            object-position: top;
+            overflow-x: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 220px;
+            top: 920px;
+            transform: rotate(180deg);
+            box-shadow: #212ea3 0px 2px 5px;
+        }
+
+        .thirtysix {
+            width: 100px;
+            height: 400px;
+            object-position: top;
+            overflow-x: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 10px;
+            top: 920px;
+            transform: rotate(180deg);
+            box-shadow: #212ea3 0px 2px 5px;
+        }
+
+        .thirtyseven {
+            width: 100px;
+            height: 400px;
+            object-position: top;
+            overflow-x: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            right: 640px;
+            top: 920px;
+            transform: rotate(180deg);
+            box-shadow: #212ea3 0px 2px 5px;
+        }
+
+        .thirtyeigth {
+            width: 100px;
+            height: 400px;
+            object-position: top;
+            overflow-x: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            right: 430px;
+            top: 920px;
+            transform: rotate(180deg);
+            box-shadow: #212ea3 0px 2px 5px;
+        }
+
+        .thirtynine {
+            width: 100px;
+            height: 400px;
+            object-position: top;
+            overflow-x: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            right: 220px;
+            top: 920px;
+            transform: rotate(180deg);
+            box-shadow: #212ea3 0px 2px 5px;
+        }
+
+        .fourty {
+            width: 100px;
+            height: 400px;
+            object-position: top;
+            overflow-x: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            right: 10px;
+            top: 920px;
+            transform: rotate(180deg);
+            box-shadow: #212ea3 0px 2px 5px;
+        }
+
+        .fourtyone {
+            width: 100px;
+            height: 400px;
+            object-position: top;
+            overflow-x: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 790px;
+            top: 920px;
+            transform: rotate(180deg);
+            box-shadow: #212ea3 0px 2px 5px;
+        }
+
+        #fourtytwo,
+        .fourtythree,
+        #fourtyfour,
+        .fourtyfive,
+        #fourtysix,
+        .fourtyseven,
+        #fourtyeight,
+        .fourtynine,
+        #fifty {
+            width: 100px;
+            height: 200px;
+            object-position: top;
+            overflow-x: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            top: 1400px;
+            transform: rotate(180deg);
+            box-shadow: #212ea3 0px 2px 5px;
+        }
+
+        #fourtytwo {
+            left: 640px;
+        }
+
+        #fourtytwo {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        .fourtythree {
+            left: 430px;
+        }
+
+        #fourtyfour {
+            left: 220px;
+        }
+
+        #fourtyfour {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        .fourtyfive {
+            left: 10px;
+        }
+
+        #fourtysix {
+            right: 640px;
+        }
+
+        #fourtysix {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        .fourtyseven {
+            right: 430px;
+        }
+
+        #fourtyeight {
+            right: 220px;
+        }
+
+        #fourtyeight {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        .fourtynine {
+            right: 10px;
+        }
+
+        #fifty {
+            left: 790px;
+        }
+
+        #fifty {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        /* end sixth layer*/
+        /* lücke*/
+        .lücke {
+            width: auto;
+            height: 150px;
+            top: 1600px;
+            position: relative;
+            background-color: transparent;
+        }
+
+        /* end lücke*/
+        /* seventh layer (gelbe 3)*/
+        .fiftyone {
+            width: 500px;
+            height: 200px;
+            object-position: top;
+            overflow-x: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 10px;
+            top: 1200px;
+            filter: blur(4px);
+            -webkit-filter: blur(4px);
+            box-shadow: #ff00b3 0px 2px 7px;
+        }
+
+        #fiftytwo {
+            width: 500px;
+            height: 200px;
+            object-position: top;
+            overflow-x: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 590px;
+            top: 1200px;
+            filter: blur(4px);
+            -webkit-filter: blur(4px);
+            box-shadow: #ff00b3 0px 2px 7px;
+        }
+
+        #fiftytwo {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        .fiftythree {
+            width: 500px;
+            height: 200px;
+            object-position: top;
+            overflow-x: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            right: 10px;
+            top: 1200px;
+            filter: blur(4px);
+            -webkit-filter: blur(4px);
+            box-shadow: #ff00b3 0px 2px 7px;
+        }
+
+        /* end seventh layer*/
+
+        /* eight layer*/
+        .fiftyfour {
+            width: 300px;
+            height: 500px;
+            object-position: top;
+            overflow-x: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 110px;
+            top: 1400px;
+            filter: blur(4px);
+            -webkit-filter: blur(4px);
+            transform: scaleY(-1);
+        }
+
+        #fiftyfive {
+            width: 300px;
+            height: 500px;
+            object-position: top;
+            overflow-x: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 410px;
+            top: 1400px;
+            filter: blur(4px);
+            -webkit-filter: blur(4px);
+            transform: scaleY(-1);
+        }
+
+        #fiftyfive {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        .fiftysix {
+            width: 260px;
+            height: 500px;
+            object-position: top;
+            overflow-x: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 710px;
+            top: 1400px;
+            filter: blur(4px);
+            -webkit-filter: blur(4px);
+            transform: scaleY(-1);
+        }
+
+        #fiftyseven {
+            width: 300px;
+            height: 500px;
+            object-position: top;
+            overflow-x: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            right: 410px;
+            top: 1400px;
+            filter: blur(4px);
+            -webkit-filter: blur(4px);
+            transform: scaleY(-1);
+        }
+
+        #fiftyseven {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+
+        .fiftyeight {
+            width: 300px;
+            height: 500px;
+            object-position: top;
+            overflow-x: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            right: 110px;
+            top: 1400px;
+            filter: blur(4px);
+            -webkit-filter: blur(4px);
+            transform: scaleY(-1);
+        }
+
+        /* end eight layer*/
+
+        /* seventh layer little elements, falsch als cicle benannt, eigentlich parallelogram */
+        #circle08,
+        .circle09,
+        #circle10,
+        .circle11,
+        #circle12,
+        .circle13,
+        #circle14 {
+            width: 50px;
+            height: 20px;
+            position: fixed;
+            overflow-x: scroll;
+            transform: skew(20deg) scaleY(-1);
+            box-shadow: #411414 0px 2px 5px;
+            align-content: center;
+
+        }
+
+        #circle08 {
+            top: 20px;
+            right: 30px;
+            left: 900px;
+        }
+
+        #circle08 {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+            transition: 0.5s;
+        }
+
+        .circle09 {
+            top: 100px;
+            right: 600px;
+            left: 500px;
+
+        }
+
+        #circle10 {
+            top: 200px;
+            right: 50px;
+            left: 900px;
+        }
+
+        #circle10 {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+            transition: 0.5s;
+        }
+
+        .circle11 {
+            top: 700px;
+            right: 200px;
+            left: 1200px;
+
+        }
+
+        #circle12 {
+            top: 800px;
+            right: 1600px;
+            left: 60px;
+        }
+
+        #circle12 {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+            transition: 0.5s;
+        }
+
+        .circle13 {
+            top: 300px;
+            right: 1600px;
+            left: 800px;
+
+        }
+
+        #circle14 {
+            top: 500px;
+            right: 1100px;
+            left: 400px;
+        }
+
+        #circle14 {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+            transition: 0.5s;
+        }
+
+        /* end seventh layer little elements, falsch als cicle benannt, eigentlich parallelogram */
+        /*Invert button*/
+        .button {
+            width: 50px;
+            height: 20px;
+            position: fixed;
+            overflow-x: scroll;
+            transform: skew(-20deg);
+            box-shadow: #ff00bf 0px 2px 5px;
+            align-content: center;
+            position: fixed;
+            background-color: transparent;
+            border-style: hidden;
+            top: 200px;
+            right: 1000px;
+            left: 700px;
+            padding-left: 0px;
+            padding-top: 0px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+            animation: float 5s ease-out infinite;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            box-shadow: 5px 5px 5px rgba(58, 30, 30, 0.856);
+            transform: skew(20deg);
+        }
+
+        .invert {
+            filter: invert(7);
+        }
+
+        @keyframes float {
+            50% {
+                transform: translateY(10px);
+            }
+        }
+
+        /*end invert button*/
+
+        /*black/white invert button*/
+        .button02 {
+            width: 50px;
+            height: 20px;
+            cursor: pointer;
+            position: fixed;
+            overflow-x: scroll;
+            transform: skew(-20deg);
+            box-shadow: #ff00bf 0px 2px 5px;
+            align-content: center;
+            position: fixed;
+            background-color: transparent;
+            border-style: hidden;
+            top: 40px;
+            right: 1800px;
+            left: 1500px;
+            padding-left: 0px;
+            padding-top: 0px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+            animation: float 5s ease-out infinite;
+            transition: all 0.2s ease;
+        }
+
+        .button02:hover {
+            box-shadow: 5px 5px 5px rgba(58, 30, 30, 0.856);
+            transform: skew(20deg);
+        }
+
+        .blackWhite {
+            mix-blend-mode: luminosity;
+        }
+
+        /*end black/white button*/
+
+        /*gelber ganzflächige linie*/
+        .line {
+            width: 1700px;
+            height: 50px;
+            top: 1040px;
+            object-position: top;
+            overflow-x: scroll;
+            margin-bottom: 10px;
+            position: absolute;
+            filter: blur(2px);
+            -webkit-filter: blur(12px);
+            transform: rotate(180deg)
+        }
+
+        /*end gelber ganzflächige linie*/
+
+        .stuff {
+            width: 1500px;
+            position: fixed;
+            left: -300px;
+            top: 20px;
+            animation: floatX 5s ease-out infinite;
+            transition: all 0.2s ease;
+        }
+
+        @keyframes floatX {
+            50% {
+                transform: translateX(10px);
+            }
+        }
+
+        .stuff02 {
+            width: 1400px;
+            position: fixed;
+            left: 300px;
+            top: -500px;
+            animation: floatXX 3s ease-out infinite;
+            transition: all 0.2s ease;
+        }
+
+        @keyframes floatXX {
+            50% {
+                transform: translateX(15px);
+            }
+        }
+
+        /*lücke ganz unten */
+        #lücke02 {
+            width: auto;
+            height: 250px;
+            top: 1600px;
+            position: relative;
+            background-color: transparent;
+        }
+
+        /*end lücke ganz unten */
+    </style>
+
+    <!-- java -->
+
+    <script>
+
+        // automatisches scrollen im div one
+
+        window.setInterval(function () {
+            var elem = document.getElementById('one');
+            elem.scrollTop = elem.scrollHeight;
+        }, 5000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('four');
+            elem.scrollTop = elem.scrollHeight;
+        }, 4000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('five');
+            elem.scrollTop = elem.scrollHeight;
+        }, 4000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('eight');
+            elem.scrollTop = elem.scrollHeight;
+        }, 5000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('ten');
+            elem.scrollTop = elem.scrollHeight;
+        }, 6000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('eleven');
+            elem.scrollTop = elem.scrollHeight;
+        }, 6000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('fourteen');
+            elem.scrollTop = elem.scrollHeight;
+        }, 6000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('fifteen');
+            elem.scrollTop = elem.scrollHeight;
+        }, 6000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('twentythree');
+            elem.scrollTop = elem.scrollHeight;
+        }, 7000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('twentyfour');
+            elem.scrollTop = elem.scrollHeight;
+        }, 5000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('twentyfive');
+            elem.scrollTop = elem.scrollHeight;
+        }, 7000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('twentysix');
+            elem.scrollTop = elem.scrollHeight;
+        }, 5000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('twentyseven');
+            elem.scrollTop = elem.scrollHeight;
+        }, 7000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('twentyeight');
+            elem.scrollTop = elem.scrollHeight;
+        }, 5000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('fourtytwo');
+            elem.scrollTop = elem.scrollHeight;
+        }, 3000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('fourtyfour');
+            elem.scrollTop = elem.scrollHeight;
+        }, 3000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('fourtysix');
+            elem.scrollTop = elem.scrollHeight;
+        }, 3000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('fourtyeight');
+            elem.scrollTop = elem.scrollHeight;
+        }, 3000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('fifty');
+            elem.scrollTop = elem.scrollHeight;
+        }, 3000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('circle08');
+            elem.scrollTop = elem.scrollHeight;
+        }, 2000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('circle10');
+            elem.scrollTop = elem.scrollHeight;
+        }, 1000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('circle12');
+            elem.scrollTop = elem.scrollHeight;
+        }, 2000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('circle14');
+            elem.scrollTop = elem.scrollHeight;
+        }, 1000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('fiftytwo');
+            elem.scrollTop = elem.scrollHeight;
+        }, 4000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('fiftyseven');
+            elem.scrollTop = elem.scrollHeight;
+        }, 4000);
+
+        window.setInterval(function () {
+            var elem = document.getElementById('fiftyfive');
+            elem.scrollTop = elem.scrollHeight;
+        }, 4000);
+        //  end automatisches scrollen im div one
+
+        // invert "mode"
+        function InvertWholePage() {
+            var body = document.body;
+            body.classList.toggle('invert');
+        }
+        // end invert "Mode"
+
+        //  black/white "mode"
+        function blackWhite() {
+            var body = document.body;
+            body.classList.toggle('blackWhite');
+        }
+//  end black/white "Mode"
+
+    </script>
+
+    <!--end java -->
+
+
+</head>
+
+
+
+<body>
+
+    <!--bildfetzen-->
+    <img class="stuff" src="Bilder/fetzen.png">
+
+    <img class="stuff02" src="Bilder/fetzen02.png">
+    <!--end bildfetzen-->
+
+    <!-- first layer -->
+    <div id="one">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div id="two">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div id="three">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div id="four">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div id="five">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div id="six">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div id="seven">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div id="eight">
+        <div class="verlauf03"></div>
+    </div>
+    <!-- first layer -->
+
+
+    <!-- second layer -->
+    <div class="nine">
+        <div class="verlauf04"></div>
+    </div>
+
+    <div id="ten">
+        <div class="verlauf04"></div>
+    </div>
+
+    <div id="eleven">
+        <div class="verlauf04"></div>
+    </div>
+
+    <div class="twelf">
+        <div class="verlauf04"></div>
+    </div>
+
+    <div class="thirteen">
+        <div class="verlauf04"></div>
+    </div>
+
+    <div id="fourteen">
+        <div class="verlauf04"></div>
+    </div>
+
+    <div id="fifteen">
+        <div class="verlauf04"></div>
+    </div>
+
+    <div class="sixteen">
+        <div class="verlauf04"></div>
+    </div>
+    <!-- second layer -->
+
+
+    <!-- third layer -->
+    <div class="seventeen">
+        <div class="verlauf02"></div>
+    </div>
+
+    <div class="eighteen">
+        <div class="verlauf02"></div>
+    </div>
+
+    <div class="ninteen">
+        <div class="verlauf02"></div>
+    </div>
+
+    <div class="twenty">
+        <div class="verlauf02"></div>
+    </div>
+
+    <div class="twentyone">
+        <div class="verlauf02"></div>
+    </div>
+
+    <div class="twentytwo">
+        <div class="verlauf02"></div>
+    </div>
+    <!-- end third layer -->
+
+    <!-- fourth layer -->
+    <div id="twentythree">
+        <div class="verlauf01"></div>
+    </div>
+
+    <div id="twentyfour">
+        <div class="verlauf01"></div>
+    </div>
+
+    <div id="twentyfive">
+        <div class="verlauf01"></div>
+    </div>
+
+    <div id="twentysix">
+        <div class="verlauf01"></div>
+    </div>
+
+    <div id="twentyseven">
+        <div class="verlauf01"></div>
+    </div>
+
+    <div id="twentyeight">
+        <div class="verlauf01"></div>
+    </div>
+    <!-- fourth layer -->
+
+    <!-- fifth layer -->
+
+    <div class="twentynine">
+        <div class="verlauf02"></div>
+    </div>
+
+    <div class="thirty">
+        <div class="verlauf02"></div>
+    </div>
+
+    <div class="thirtyone">
+        <div class="verlauf02"></div>
+    </div>
+
+    <div class="thirtytwo">
+        <div class="verlauf02"></div>
+    </div>
+
+
+    <!-- fifth layer little elements
+    falsch als circle benannt, eigetlich paralelogram-->
+
+    <div class="circle01">
+        <div class="verlauf03"></div>
+    </div>
+    <div class="circle02">
+        <div class="verlauf03"></div>
+    </div>
+    <div class="circle03">
+        <div class="verlauf03"></div>
+    </div>
+    <div class="circle04">
+        <div class="verlauf03"></div>
+    </div>
+    <div class="circle05">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div class="circle06">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div class="circle07">
+        <div class="verlauf03"></div>
+    </div>
+    <!-- end fifth layer little elements-->
+
+    <!-- nächste Layer kleine formen (Dreiecke)--
+    <div class="triangle01">
+        <div class="verlauf01"></div>
+    </div>
+
+
+    -- nächste Layer kleine formen (Dreiecke)-->
+
+    <!-- form aus Illustrator--
+    <img class="form01" src="Bilder/for01m-08.png">
+     form aus Illustrator-->
+
+
+    <!-- sixth layer -->
+    <div class="thirtythree">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div class="thirtyfour">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div class="thirtyfive">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div class="thirtysix">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div class="thirtyseven">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div class="thirtyeigth">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div class="thirtynine">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div class="fourty">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div class="fourtyone">
+        <div class="verlauf03"></div>
+    </div>
+    <!-- 1.part sixth layer (second part after eight layer)-->
+
+    <!-- end sixth layer -->
+
+    <!-- lücke -->
+    <div class="lücke"></div>
+    <!-- end lücke -->
+
+    <!-- seventhh layer -->
+
+    <div class="fiftyone">
+        <div class="verlauf04"></div>
+    </div>
+
+    <div id="fiftytwo">
+        <div class="verlauf04"></div>
+    </div>
+
+    <div class="fiftythree">
+        <div class="verlauf04"></div>
+    </div>
+
+    <!-- end seventhh layer -->
+
+    <!-- eight layer -->
+    <div class="fiftyfour">
+        <div class="verlauf02"></div>
+    </div>
+
+    <div id="fiftyfive">
+        <div class="verlauf02"></div>
+    </div>
+
+    <div class="fiftysix">
+        <div class="verlauf02"></div>
+    </div>
+
+    <div id="fiftyseven">
+        <div class="verlauf02"></div>
+    </div>
+
+    <div class="fiftyeight">
+        <div class="verlauf02"></div>
+    </div>
+    <!-- end eight layer -->
+
+    <!-- 2.part sixth layer -->
+    <div id="fourtytwo">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div class="fourtythree">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div id="fourtyfour">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div class="fourtyfive">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div id="fourtysix">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div class="fourtyseven">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div id="fourtyeight">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div class="fourtynine">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div id="fifty">
+        <div class="verlauf03"></div>
+    </div>
+    <!-- end 2.part sixth layer -->
+
+
+
+    <!-- seventh layer little elements
+    falsch als circle benannt, eigetlich parallelogram-->
+
+    <div id="circle08">
+        <div class="verlauf03"></div>
+    </div>
+    <div class="circle09">
+        <div class="verlauf03"></div>
+    </div>
+    <div id="circle10">
+        <div class="verlauf03"></div>
+    </div>
+    <div class="circle11">
+        <div class="verlauf03"></div>
+    </div>
+    <div id="circle12">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div class="circle13">
+        <div class="verlauf03"></div>
+    </div>
+
+    <div id="circle14">
+        <div class="verlauf03"></div>
+    </div>
+    <!-- end fifth layer little elements-->
+
+    <!--Invert button-->
+    <div class="button">
+        <button onclick="InvertWholePage()" class="verlauf03"></button>
+    </div>
+    <!--end Invert button-->
+
+    <!--black/white button-->
+    <div class="button02">
+        <button onclick="blackWhite()" class="verlauf03"></button>
+    </div>
+    <!--end black/white button-->
+
+    <!--nineth layer-->
+    <div class="line">
+        <div class="verlauf04"></div>
+    </div>
+    <!--end nineth layer-->
+    <!-- lücke -->
+    <div id="lücke02"></div>
+    <!-- end lücke -->
+
+</body>
+
+<footer>
+
+</footer>
+
+</html>
